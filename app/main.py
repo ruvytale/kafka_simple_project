@@ -35,7 +35,7 @@ async def startup_event():
     try:
         client.create_topics([topic], validate_only=False)
     except TopicAlreadyExistsError as e:
-        print(e)
+        pass
     finally:
         client.close()
 
